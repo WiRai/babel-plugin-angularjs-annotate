@@ -1,6 +1,6 @@
 'use strict';
 
-const babel = require('babel-core');
+const babel = require('@babel/core');
 const diff = require('diff');
 const chalk = require('chalk');
 const indent = require('indent-string');
@@ -10,7 +10,7 @@ const path = require('path');
 const resolve = (file) => path.resolve(__dirname, file);
 
 const ES6presets = [
-  [ "env", { exclude: ['transform-es2015-function-name'] } ]
+  [ "@babel/env", { exclude: ['transform-function-name'] } ]
 ];
 
 const plugin = resolve("../babel-ng-annotate.js");
